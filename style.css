@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.logo img{
+    width: 220px;
+    object-fit: contain;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+}
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    background-image: url('HD-wallpaper-artificial-intelligence-cyber-intelligence.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: -1;
+}
+.menu,.close{
+    display: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff9f9;
+}
+nav a {
+    position: relative;
+    font-size: 1.4em;
+    color: #cdf9d6;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: .5s;
+}
+nav a:hover {
+    color: #0ef;
+}
+nav a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+}
+nav a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+.hero-section h1{
+    font-family:"Jost-SemiBold";
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 95px;
+    color: #ffffff;
+    width: 530px;
+    padding-bottom: 25px;
+    margin-left: 8px;
+    text-transform: capitalize;
+    position: relative;
+}
+.hero-section h1::after{
+    content: '';
+    position: absolute;
+    top: -41px;
+    right: 10px;
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 165px;
+    height: 180px;
+}
+.hero-section p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: #edf0ec;
+    margin-left: 63px;
+}
+.hero-img img{
+    height: 530px;
+    margin-top: 90px;
+    margin-left: 350px;
+    object-fit: contain;
+    animation: move 3s infinite alternate;
+}
+@keyframes move {
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+@media screen and (max-width:1440px){
+    .logo img{
+        width: 100px;
+    }
+    .nav ul li{
+        font-size: 18px;
+    }
+    .hero-img img{
+        height: 420px;
+    }
+    .hero-section h1{
+        font-size: 60px;
+        line-height: 75px;
+        width: 460px;
+    }
+    .hero-section h1::after{
+        top: -58px;
+        right: 24px;
+    }
+}
+
+/* small size laptop responsive - keep ur browser size in 1024px */
+
+@media screen and (max-width:1200px){
+    .logo img{
+        width: 80px;
+    }
+    .nav ul li{
+        font-size: 16px;
+    }
+    .hero-img img{
+        height: 360px;
+    }
+    .hero-section h1{
+        font-size: 50px;
+        line-height: 65px;
+        width: 387px;
+    }
+    .hero-section h1::after{
+        top: -65px;
+        right: 10px;
+    }
+    .hero-section p{
+        font-size: 18px;
+    }
+    header{
+        padding: 20px 80px;
+    }
+    .hero-section{
+        padding: 0px 80px;
+    }
+}
+/* tablet responsive - keep ur browser size in 768px */
+
+@media screen and (max-width:991px){
+    .hero-section{
+        padding: 0px 50px ;
+    }
+    header{
+        padding: 20px 50px ;
+    }
+    .hero-section h1{
+        font-size: 40px;
+        line-height: 60px;
+        width: 320px;
+    }
+    .hero-section h1::after{
+        top: -60px;
+        right: 0px;
+        background-size: contain;
+    }
+    .hero-img img{
+        height: 30ppx;
+    }
+    .hero-section p{
+        font-size: 14px;
+    }
+    .menu{
+        display: block;
+    }
+    .close{
+        display: block;
+        z-index: 99;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav.active{
+        right: -300px;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        background-color: #07062c;
+        box-shadow: 0 40px 60px rgb(0 0 0 / 10%);
+        transition: .5s ease-in-out;
+    }
+    .nav ul{
+        flex-direction: column;
+    }
+    .nav ul li{
+        margin-left: 0px;
+        padding-bottom: 40px;
+    }
+}
+
+/* mobile responsive - keep ur browser size in 360px */
+
+@media screen and (max-width:650px){
+    header{
+        padding: 15px 25px;
+    }
+    .hero-section{
+        padding: 0px 25px;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .hero-section h1{
+        font-size: 30px;
+        line-height: 45px;
+        width: 244px;
+        padding-bottom: 5px;
+    }
+    .hero-section h1::after{
+        top: -27px;
+        right: 0px;
+        width: 100px;
+        height: 100px;
+    }
+    .content{
+        margin-top: 100px;
+    }
+    .hero-img img{
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    .logo img{
+        width: 60px;
+    }
+}
